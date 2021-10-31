@@ -6,7 +6,9 @@ namespace Source
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var randomNumberGenerator = new Random();
+            var randomNumber = randomNumberGenerator.Next() % 10;
+            Console.WriteLine("using random: " + randomNumber);
         }
     }
 }
