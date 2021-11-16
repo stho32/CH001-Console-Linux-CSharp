@@ -1,7 +1,5 @@
-﻿using Random.BL.Numbers;
-using Random.BL;
+﻿/****
+    random generator test
+**/
 
-var factory = new RandomGeneratorFactory();
-var generator = factory.NumberGenerator;
-
-Console.WriteLine(generator.GetNumber(1, 10));
+Console.WriteLine("Whoot");
