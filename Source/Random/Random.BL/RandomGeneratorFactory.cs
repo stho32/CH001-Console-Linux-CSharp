@@ -1,9 +1,9 @@
+using Random.BL.Numbers.Classes;
 using Random.BL.Numbers.Interfaces;
 
-namespace Random.BL
+namespace Random.BL;
+
+public class RandomGeneratorFactory : IRandomGeneratorFactory
 {
-    public class RandomGeneratorFactory : IRandomGeneratorFactory
-    {
-        public IRandomNumberGenerator NumberGenerator { get; }
-    }
+    public IRandomNumberGenerator NumberGenerator => new RandomNumberGenerator();
 }

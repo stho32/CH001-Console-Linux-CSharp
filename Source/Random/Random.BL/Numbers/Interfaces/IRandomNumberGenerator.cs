@@ -1,7 +1,6 @@
-namespace Random.BL.Numbers
+namespace Random.BL.Numbers.Interfaces;
+
+public interface IRandomNumberGenerator
 {
-    public interface IRandomNumberGenerator
-    {
-        int GetNumber(int min, int max);
-    }
+    int GetNumber(int min, int max);
 }

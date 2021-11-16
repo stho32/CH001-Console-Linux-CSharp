@@ -1,5 +1,5 @@
-﻿using Xunit;
-using Random.BL.Numbers.Classes;
+﻿using Random.BL.Numbers.Classes;
+using Xunit;
 
 namespace Random.BL.Tests;
 
