@@ -3,3 +3,5 @@ bin/
 obj/net5.0
 obj/net6.0
 .idea
+*.user
+obj/
