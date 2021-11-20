@@ -10,7 +10,7 @@ public class Parser {
         this.options = options;
     }
 
-    public void Parse(string[] args)
+    public bool TryParse(string[] args)
     {
         var position = 0;
 
@@ -25,9 +25,11 @@ public class Parser {
             }
 
             if (startPositionForTheRound == position) {
-                throw new Exception("The command line arguments contain something invalid.");
+                return false;
             }
         }
+
+        return true;
     }
 
     public bool GetBoolOption(string name)
@@ -35,6 +37,18 @@ public class Parser {
         foreach (var option in options) {
             if (option.Name.ToLower().Trim() == name.ToLower().Trim()) {
                 if (option is IBoolCommandLineOption op) {
+                    return op.GetValue();
+                }
+            }
+        }
+
+        throw new Exception($"A bool command line option with the name {name} could not be found.");
+    }
+
+    public int GetInt32Option(string name) {
+        foreach (var option in options) {
+            if (option.Name.ToLower().Trim() == name.ToLower().Trim()) {
+                if (option is IInt32CommandLineOption op) {
                     return op.GetValue();
                 }
             }
