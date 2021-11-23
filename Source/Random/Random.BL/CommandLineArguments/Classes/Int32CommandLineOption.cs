@@ -37,22 +37,16 @@ public class Int32CommandLineOption : IInt32CommandLineOption
         if (myName == arg) {
             _hasValue = true;
 
-            try {
-                if (!Int32.TryParse(args[position+1], out _value)) {
-                    throw new Exception(args[position+1] + " is an invalid value for argument " + myName);
-                }
+            if (!Int32.TryParse(args[position+1], out _value)) {
+                throw new Exception(args[position+1] + " is an invalid value for argument " + myName);
+            }
 
-                if (_value < _min) {
-                    throw new Exception(args[position+1] + " is a too low value for argument " + myName);
-                }
+            if (_value < _min) {
+                throw new Exception(args[position+1] + " is a too low value for argument " + myName);
+            }
 
-                if (_value > _max) {
-                    throw new Exception(args[position+1] + " is a too high value for argument " + myName);
-                }
-            } 
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+            if (_value > _max) {
+                throw new Exception(args[position+1] + " is a too high value for argument " + myName);
             }
             
             position += 1;

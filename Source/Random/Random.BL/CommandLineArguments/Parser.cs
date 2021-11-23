@@ -19,8 +19,16 @@ public class Parser {
 
             foreach (var option in options) {
                 if (option.HasNoValueYet()) {
-                    if (option.TryParseFrom(args, ref position))
-                        continue;
+                    try
+                    {
+                        if (option.TryParseFrom(args, ref position))
+                            continue;
+                    } 
+                    catch (Exception ex) 
+                    {
+                        Console.WriteLine(ex.Message);
+                        return false;
+                    }
                 }
             }
 

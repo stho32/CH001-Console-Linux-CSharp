@@ -36,12 +36,26 @@ public class Int32CommandLineOptionTests {
 
     [Fact]
     public void When_the_argument_is_given_but_the_value_is_not_provided_there_is_an_error() {
-        throw new Exception("NIY");
+        string[] args = new[] {"numeric"};
+
+        var parser = new Parser(
+            new[] {
+                new Int32CommandLineOption("numeric", -1)
+            });
+
+        Assert.False(parser.TryParse(args));
     }
 
     [Fact]
     public void When_the_argument_is_given_but_the_value_has_the_wrong_type_there_is_an_error() {
-        throw new Exception("NIY");
+        string[] args = new[] {"numeric", "Stefan"};
+
+        var parser = new Parser(
+            new[] {
+                new Int32CommandLineOption("numeric", -1)
+            });
+
+        Assert.False(parser.TryParse(args));
     }
 
 }
