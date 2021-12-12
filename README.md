@@ -10,12 +10,12 @@ Nach der Klassifikation beinhaltet dieses Repository:
 # Zufallsgenerator Anforderungen
 
 - [ ] Es gibt eine einfache Möglichkeit eine Zufallszahl zwischen 1 und 10 abzurufen
-- [ ] Es gibt eine Möglichkeit beliebige Zufallszahlen zwischenzwei angegebenen Werten abzurufen
+- [ ] Es gibt eine Möglichkeit beliebige Zufallszahlen zwischen zwei angegebenen Werten abzurufen
 - [ ] Es gibt eine Möglichkeit Zufallskennworte zu generieren
   - [ ] mit Sonderzeichen/ohne Sonderzeichen
   - [ ] in beliebiger Länge
   - [ ] mit Zahlen, ohne Zahlen
-  - [ ] Groß-/Klrinschreibung
+  - [ ] Groß-/Kleinschreibung
   - [ ] Steuerung der Anteile
 - [ ] Generierung von zufälligen Tiernamen z.B. lustig schnappender Lurch
 
